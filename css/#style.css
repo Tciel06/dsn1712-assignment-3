@@ -11,16 +11,30 @@ header{
     align-items: center;
 }
 
-header nav ul li{
-    margin-left: 30px;
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    color: #000;
 }
 
-.body{
-    display: flex;
-    justify-items: right;
-    justify-content: space-between;
-    align-items: center;
+
+header nav ul {
+   display: flex;
 }
+
+header nav ul li{
+   margin-left: 20px;
+ }
+
+header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+ 
+
+
 
 #hero{
     height: 600px;
@@ -28,16 +42,64 @@ header nav ul li{
     background-position: center center;
     background-size: 1000px;
     background-repeat: no-repeat;
-    filter: grayscale();
+    filter: grayscale(70%);
+    display: flex;
+}
+
+#hero h1{
+    max-width: 40%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#about-me{
+    max-width: 940px;
+    justify-content: center;
+    align-items: center;
 }
 
 
+.pictures{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "div1"  "div1"  "div1"  "div2"  "div2" "div2" 
+      "div3"  "div3"  "div4"  "div4"  "div5" "div5" 
+      
+  }
+  
+  .pictures div:nth-child(1){
+    grid-area: div1;
+    width: 100px;
+  }
+  
+  .pictures div:nth-child(2){
+    grid-area: div2;
+    width: 100px;
+  }
+  
+  .pictures div:nth-child(3){
+    grid-area: div3;
+    width: 100px;
+  }
+  
+  .pictures div:nth-child(4){
+    grid-area: div4;
+    width: 100px;
+  }
 
-
-
-
-
-
+  .pictures div:nth-child(5){
+    grid-area: div5;
+    width: 100px;
+  }
+  
 
 .footer{
     background-color: #000;
